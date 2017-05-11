@@ -1,5 +1,18 @@
 # Django, uWSGI and Nginx in a container, using Supervisord
 
+This is a combination of fork https://github.com/dockerfiles/django-uwsgi-nginx for docker to launch django web app which held for another fork https://github.com/beniz/deepdetect for deep learning, environment based on my ubuntu 16.04 with Geforce 1050.
+Following is my set-up step:
+
+FIRSTLY, suppose that you've also got the development environment such as python-pip, docker installed & set. Build and install deepdetect, which generate executable dede (i've tried to upload it but told too large)... For the sake of using in docker, you have better to locate it to your dockerfile place.
+
+SECONDLY, create your own django project & app and migrate to docker's code /app folder. it's better to test seperately your django project and docker's default app are all well before you go insert.
+
+LAST but not LEAST, just generate your self curl(get/post) command or webpage to join the deepdetect and do more stuffs whatever you wanna.
+
+It's just a development lab not for production environment.
+
+###############################################################################
+
 This Dockerfile shows you *how* to build a Docker container with a fairly standard
 and speedy setup for Django with uWSGI and Nginx.
 
